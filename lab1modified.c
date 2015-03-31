@@ -118,5 +118,7 @@ int main(int argc, char* argv[])
 	print_r(reduced);
 	free(temp);
 	free(reduced);
+
+
 	return 0;
 }
