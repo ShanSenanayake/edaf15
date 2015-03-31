@@ -75,6 +75,7 @@ r_nbr* addq(r_nbr* r1,r_nbr* r2){
 	return add;
 }
 
+
 r_nbr* subq(r_nbr* r1,r_nbr* r2){
 	r_nbr* sub = (r_nbr*)malloc(sizeof(r_nbr));
 	sub->u = (r1->u)*(r2->l) - (r1->l)*(r2->u);
@@ -87,29 +88,38 @@ int main(int argc, char* argv[])
 {
 	r_nbr r1 = {8,2};
 	r_nbr r2 = {5,30};
+
 	printf("r1 = ");
 	print_r(&r1);
+
 	printf("r2 = ");
 	print_r(&r2);
+
 	printf("r1 + r2 = ");
 	r_nbr* temp = addq(&r1,&r2);
 	print_r(temp);
 	free(temp);
+
 	printf("r1 - r2 = ");
 	temp = subq(&r1,&r2);
 	print_r(temp);
 	free(temp);
+
 	printf("r1 * r2 = ");
 	temp = mulq(&r1,&r2);
 	print_r(temp);
 	free(temp);
+
 	printf("r1 / r2 = ");
 	temp = divq(&r1,&r2);
 	print_r(temp);
+
 	printf("reduced r1 / r2 = ");
 	r_nbr* reduced = reduce(temp);
 	print_r(reduced);
 	free(temp);
 	free(reduced);
+
+
 	return 0;
 }
