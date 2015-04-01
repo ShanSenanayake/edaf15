@@ -2,13 +2,13 @@
 
 #define N (4)
 
-int	a[] = { 1, 2, 3, 4, };
+int	a[] = { 1, 2, 3, 4, 0};
 int     x = 1000;
 
 int main()
 {
 	int	i;	
-	int	sum;
+	int	sum = 0;
 
 	printf("welcome to the buggy sum program. the sum should be 10\n");
 

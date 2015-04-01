@@ -13,7 +13,7 @@ void print_r(r_nbr* r)
 
 }
 
-//bitwise gcd
+/*//bitwise gcd
 unsigned int gcd(unsigned int u, unsigned int v)
 {
     // simple cases (termination)
@@ -44,6 +44,18 @@ unsigned int gcd(unsigned int u, unsigned int v)
  
     return gcd((v - u) >> 1, u);
 }
+*/
+int gcd(int a, int b)
+{
+  int c = a % b;
+  while(c != 0)
+  {
+    a = b;
+    b = c;
+    c = a % b;
+  }
+  return b;
+}
 
 r_nbr* reduce(r_nbr* r)
 {
@@ -53,6 +65,7 @@ r_nbr* reduce(r_nbr* r)
 	reduced->l = r->l/i;
 	return reduced;
 }
+
 
 r_nbr* mulq(r_nbr* r1,r_nbr* r2){
 	r_nbr* mul = (r_nbr*)malloc(sizeof(r_nbr));
