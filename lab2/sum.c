@@ -12,7 +12,7 @@ int main()
 
 	printf("welcome to the buggy sum program. the sum should be 10\n");
 
-	for (i = 0; i <= N; i++)
+	for (i = 0; i < N; i++)
 		sum += a[i];
 
 	printf("sum = %d\n", sum);

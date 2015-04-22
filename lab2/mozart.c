@@ -9,7 +9,7 @@ struct {
 	char				t[6];
 	unsigned long long		x;
 	unsigned long long		y;
-} a = { 0, 1756, "mozart", "???", 8243124871055238688ull };
+} a = { 0, 777, "mozart", "???", 8243124871055238688ull };
 
 size_t strlen(const char* s)
 {
@@ -29,9 +29,9 @@ int main()
 
 	strncpy(a.t, a.s, 6);
 	
-	length = strlen(a.t);
+	length = strlen(a.s);
 
-	printf("a.t is %s with length %d\n", a.t, length);
+	printf("a.s is %s with length %d\n", a.s, length);
 
 	return 0;
 }

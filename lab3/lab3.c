@@ -7,7 +7,7 @@
 
 #define N		(10)
 
-int	a[N] = { 1 };
+int	a[N] = { 1, 2};
 int*	b = &a[0];
 
 void fail1()
@@ -17,6 +17,8 @@ void fail1()
 	printf("*b   = %d\n", *b);
 	*b = 2;
 	a[N-1] = 3;
+	//a[N] = 0x601060+4;
+	//printf("%p\n", (void*) a);
 	printf("*b = %d\n", *b);
 }
 
