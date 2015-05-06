@@ -58,3 +58,10 @@ unsigned long long name_fm(char* aname, char* cname, int seconds)
 
 	return fm_count;
 }
+
+
+bool fm_elim(double[][], cols, a, c)
+{
+
+
+}

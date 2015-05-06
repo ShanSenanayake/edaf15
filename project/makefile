@@ -7,12 +7,12 @@
 
 CC	= gcc
 OUT	= fm
-OBJS	= main.o name_fm.o
+OBJS	= main.o dat11sse_jny_fm.o
 
 all: $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(OUT)
 	./fm
-	size name_fm.o
+	size dat11sse_jny_fm.o
 
 clean:
 	rm -f $(OUT) $(OBJS)
